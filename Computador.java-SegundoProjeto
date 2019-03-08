@@ -1,16 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Computador de Bordo</title>
-</head>
-<body>
-	<form action="computador" method="POST">
-		Total de combustível (litros) <br> <input type="text" size="10"
-			name="total"><br> Preço do litro(R$) <br> <input
-			type="text" size="10" name="preco"><br> Consumo médio <br>
-		<input type="text" size="10" name="consumo"> <br> <input
-			type="submit" value="calcular">
-	</form>
-</body>
-</html>
+package servlets;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class Computador
+ */
+@WebServlet("/computador")
+public class Computador extends HttpServlet {
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		float t = Float.parseFloat(request.getParameter("total"));
+		float p = Float.parseFloat(request.getParameter("preco"));
+		float c = Float.parseFloat(request.getParameter("consumo"));
+		
+		float v = t * p;
+		float d = t * c;
+		
+		request.setAttribute("valor", v);
+		request.setAttribute("distancia", d);
+		
+		request.getRequestDispatcher("computador.jsp").forward(request, response);
+	}
+
+}
