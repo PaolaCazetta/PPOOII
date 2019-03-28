@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="ISO-8859-1">
+		<title>Cadastro</title> <!-- Titulo da pagina -->
+	</head>
+	<body>
+			<center>
+			<a href="index.html" style="text-decoration: none">
+			<font face="arial" color="black">Início |</font></a> <!-- esta apontando para a pagina do index -->
+	        
+	        <a href="CadastroNotas.html" style="text-decoration: none">
+	        <font face="arial" color="black"> Cadastro de Notas </font></a>	   <!-- esta apontando para a pagina de Cadastro -->     
+       	        
+	        <br><br><br>
+            
+            <h2><font face= Arial color = blue>Faculdade X </font></h2>
+            <h4><font face= Arial color = green>Sistema de Gestão de Alunos</font></h4>
+	        
+	        <br><br> <!-- Alinhando textos ao centro e definindos fontes e cores -->
+	         <!-- Criando um formulario com as opções de entrada onde os dados serão informados pelo usuario 
+	        que terá dentro da pagina unsando o comando form, foi o usado o metodo POST que faz envio destes dados de forma oculta na URL da pagina -->
+	        <!-- O processar  foi definido realiza a comunicação de recebimento e envio dos dados que foi definido no arquivo ServletAluno.java-->
+	        <form  action="processar" method="POST"> 
+	             
+	        Aluno: 		<input type="text" name="nome" size="20"><br>
+	        Matricula:  <input type="text" name="matricula" size="16"><br>
+	        Nota1: 		<input type="text" name="nota1" size="20"><br>
+	        Nota2: 		<input type="text" name="nota2" size="20"><br>
+	        Nota3: 		<input type="text" name="nota3" size="20"><br>
+	        Frequencia (%):	<input type="text" name="frequencia" size="13"><br>
+	        Disciplina:
+	        <select id="disciplina" name="disciplina"> <!-- Dentro do formulario tem a opções de escolher a materia desajada usando select -->
+	              <option value="Engenharia de Software">Engenharia de Software</option>
+	              <option value="Estrutura de Dados">Estrutura de Dados</option>
+	              <option value="Linguagem de Programacao">Linguagem de Programacao</option>
+	              <option value="Segurança da Informacao">Segurança da Informacao</option>
+	              
+	        </select> 
+	           
+	        <br><br>
+	        
+	        <input type="submit" name="cadastrar" value="Cadastrar"> <!-- Botão onde confirma o cadastro realizado e envia os dados para o servletAluno.java -->
+	
+	        </form>
+	         
+	        <br><br><br><hr>
+	        
+	        <h6><font face= Arial>Copyright © 2017 </font></h6>
+	        </center>
+	</body>
+</html>
