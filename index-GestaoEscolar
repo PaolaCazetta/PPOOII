@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="ISO-8859-1">
+		<title>Inicio</title> <!-- Titulo da pagina -->
+	</head>
+	<body>
+		<center> 
+		<a href="index.html" style="text-decoration: none">
+        <font face="arial" color="black">Início | </font></a> <!-- esta apontando para a pagina do index -->
+        
+        <a href="CadastroNotas.html" style="text-decoration: none">
+        <font face="arial" color="black"> Cadastro de Notas </font></a>   <!-- esta apontando para a pagina de Cadastro -->
+        
+        <br><br><br>        
+            
+        <h2><font face= Arial color = blue>Faculdade X </font></h2>
+        <h4><font face= Arial color = green>Sistema de Gestão de Alunos</font></h4>
+        
+        <br><br>
+
+      	<h5><font face= Arial>
+        Seja bem vindo ao Sistema de Gestão de Alunos!<br>
+        Escolha no menu acima a opção desejada.</font></h5>   <!-- Alinhando textos ao centro e definindos fontes e cores -->        
+         
+         <br><br><br><br><br><br><br><hr>
+         <h6><font face= Arial>Copyright © 2017 </font></h6> 
+         </center>
+	</body>
+</html>
