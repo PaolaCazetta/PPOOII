@@ -1,0 +1,57 @@
+out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+                        
+            out.println("</head>");
+            out.println("<body>");
+            
+            out.println("<center>");
+            
+            out.println("<a href='index.html' style='text-decoration: none'>"
+            		+ "<font face='arial' color='black'>Início |</font></a>");
+            out.println("<a href='CadastroNotas.html' style='text-decoration: none'>"
+            		+ "<font face='arial' color='black'> Cadastro de Notas </font></a>");   
+            
+            out.println("</center>");
+            out.println("<BR><BR>");
+            out.println("<center>Listagem de Alunos</center>");
+            out.println("<BR><BR>");
+            out.println("<center>");
+            out.println("<table border=\"1\">");
+            
+            for (int i = 0; i< L.size(); i++)//percorre toda lista até o seu limite 
+            {
+                if ("Reprovado".equals(L.get(i).getSituacao())) //verifica se é reprovado, se for recebe a cor vermelha
+                {
+                	out.println("<tr bgcolor=\"#FF0000\">");
+                }
+                else
+                {
+                	out.println("<tr bgcolor=\"#0000ff\">"); //Se for aprovado recebe a cor azul
+                }
+                
+                //buscam os dados a lista e exibe na tabela
+                out.println("<td>");
+                out.println(L.get(i).getNome() );
+                out.println("</td>");
+                
+                out.println("<td>");
+                out.println(L.get(i).getMedia() );
+                out.println("</td>");
+                
+                out.println("<td>");
+                
+                out.println(L.get(i).getSituacao() );
+                out.println("</td>");
+                
+                out.println("<td>");
+                out.println(L.get(i).getDisciplina() );
+                out.println("</tr>");
+            }
+            
+            out.println("</table>");
+            out.println("</center>");
+            out.println("<BR><BR>");
+            	
+            out.println("</body>");
+            out.println("</html>");
