@@ -28,9 +28,8 @@ public class ProdutoDao {
 			}
 		}
 	
-		public List<Produto> getStudents() {
+		public List<Produto> getProdutos() {
 			try (Session session = HibernateUtil.getSessionFactory().openSession()) {
 				return session.createQuery("from produto", Produto.class).list();
 			}
-		}
-}
+	
