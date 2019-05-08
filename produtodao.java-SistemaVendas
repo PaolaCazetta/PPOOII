@@ -9,7 +9,7 @@ import util.HibernateUtil;
 
 public class ProdutoDao {
 	
-	public void saveStudent(Produto student) {
+	public void salvarProduto(Produto produto) {
 			
 			Transaction transaction = null;
 			
@@ -17,7 +17,7 @@ public class ProdutoDao {
 				
 				transaction = session.beginTransaction();
 				
-				session.save(student);
+				session.save(produto);
 				
 				transaction.commit();
 			} catch (Exception e) {
