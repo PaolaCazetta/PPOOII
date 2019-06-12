@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Cadastro de Produto</title>
+	</head>
+	<body>
+		<center> 
+		
+		<!-- apontando para a página do index -->
+		<a href="index.html" style="text-decoration: none">
+        <font face="arial" color="black"> Início </font></a> 
+        
+        <br><br><br>
+        
+		<form action="servletproduto" method="POST">		
+		
+		Nome do produto <br> 
+		<input type="text" size="20" name="nomeproduto"><br><br> 
+		
+		Preço do produto (R$) <br>
+		<input type="text" size="15" name="precoproduto"> <br><br> 
+		
+		<input type="submit" value="cadastrar">
+				
+		<br><br><br><br><br><br><br><hr>
+        <h6><font face= Arial>Copyright © 2019 </font></h6> 
+         
+		</center> 
+	</body>
+</html>
