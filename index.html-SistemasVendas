@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Página Inicial</title>
+	</head>
+	<body>			
+		<center> 
+		
+		<!-- apontando para a página do index -->
+		<a href="index.html" style="text-decoration: none">
+        <font face="arial" color="black">Início | </font></a>
+        
+        <!-- apontando para a página do Cadastro de Produto -->
+        <a href="CadastroProduto.html" style="text-decoration: none">
+        <font face="arial" color="black"> Cadastro de Produto </font></a>
+        
+        <br><br><br>        
+            
+        <h2><font face= Arial color = blue>Protótipo</font></h2>
+        <h4><font face= Arial color = green>Sistema X</font></h4>
+        
+        <br><br>
+
+      	<h5><font face= Arial>
+        Seja bem vindo ao Sistema X!<br>
+        Escolha no menu acima a opção desejada.</font></h5>        
+         
+        <br><br><br><br><br><br><br><hr>
+        <h6><font face= Arial>Copyright © 2019 </font></h6> 
+        
+        </center>		
+	</body>
+</html>
