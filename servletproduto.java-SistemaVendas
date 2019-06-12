@@ -1,0 +1,78 @@
+package servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import entidade.Produto;
+import dao.*;
+
+@WebServlet("/servletproduto")
+public class servletproduto extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+
+	public servletproduto() {
+        super();        
+    }
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
+						
+		response.setContentType("text/html");		
+		
+		try (PrintWriter out = response.getWriter()){        
+		        
+			String nome = null;
+			double preco = 0;
+			
+			Produto p = new Produto();		
+			
+			if (request.getParameter("nomeproduto") != null) 
+	        {
+				nome = request.getParameter("nomeproduto");
+				p.setNome(nome);
+	        }
+			
+			if (request.getParameter("precoproduto") != null) 
+	        {
+				preco =  Double.parseDouble(request.getParameter("precoproduto"));
+				p.setPreco(preco);
+	        }					
+			   	
+	        try {
+	        	if (nome != null || preco != 0) {
+			        ProdutoDao produtoDao = new ProdutoDao();
+			    	produtoDao.inserirProduto(p);		    	
+			    	
+			    	out.println("<html>");
+			        out.println("<head>");
+			        out.println("<title>Resultado Persitência de Dados</title>");
+			        out.println("</head>");
+			        out.println("<body>");
+			        out.println("<center>");
+			        out.println("<a href=\"index.html\" style=\"text-decoration: none\">");
+			        out.println("<a href=\"index.html\" style=\"text-decoration: none\">");
+			        out.println("<font face=\"arial\" color=\"black\"> Início </font></a>");
+			        out.println("<br><br><br>");			        
+			        out.println("PRODUTO INDLUÍDO");
+			        out.println("<br>");
+			        out.println("Nome: " + nome + "<br />");        
+			        out.println("Preço: " + preco + "<br />");
+			        out.println("<br><br><br><br><br><br><br><hr>");
+			        out.println("<h6><font face= Arial>Copyright © 2019 </font></h6>");			         
+			        out.println("</center>");
+			        out.println("</body>");
+			        out.println("</html>");   
+	        	}
+	        }
+	    	catch (Exception e) {
+	            out.println("Nao salvou!");
+	        }
+		}
+	}
+}
