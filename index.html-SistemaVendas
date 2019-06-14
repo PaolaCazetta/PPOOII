@@ -12,7 +12,7 @@
         <font face="arial" color="black">Início | </font></a>
         
         <!-- apontando para a página do Cadastro de Produto -->
-        <a href="CadastroProduto.html" style="text-decoration: none">
+        <a href="ServletCadastroProduto.html" style="text-decoration: none">
         <font face="arial" color="black"> Cadastro de Produto </font></a>
         
         <br><br><br>        
