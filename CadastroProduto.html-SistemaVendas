@@ -9,11 +9,11 @@
 		
 		<!-- apontando para a página do index -->
 		<a href="index.html" style="text-decoration: none">
-        <font face="arial" color="black"> Início </font></a> 
+        	<font face="arial" color="black"> Início </font></a> 
         
-        <br><br><br>
+        	<br><br><br>
         
-		<form action="servletproduto" method="POST">		
+		<form action="ServletCadastroProduto" method="POST">		
 		
 		Nome do produto <br> 
 		<input type="text" size="20" name="nomeproduto"><br><br> 
@@ -24,7 +24,7 @@
 		<input type="submit" value="cadastrar">
 				
 		<br><br><br><br><br><br><br><hr>
-        <h6><font face= Arial>Copyright © 2019 </font></h6> 
+        	<h6><font face= Arial>Copyright © 2019 </font></h6> 
          
 		</center> 
 	</body>
