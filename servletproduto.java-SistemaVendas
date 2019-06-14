@@ -12,11 +12,11 @@ import entidade.Produto;
 import dao.*;
 
 @WebServlet("/servletproduto")
-public class servletproduto extends HttpServlet {
+public class ServletCadastroProduto extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 
-	public servletproduto() {
+	public ServletCadastroProduto() {
         super();        
     }
 	
@@ -76,3 +76,4 @@ public class servletproduto extends HttpServlet {
 		}
 	}
 }
+
